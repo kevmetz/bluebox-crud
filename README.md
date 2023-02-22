@@ -1,70 +1,91 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# description
 
-## Available Scripts
+the is a minimal viable crud dont in three flavours
+1) no state except for list, data read from database every change
+2) state for everything, read data once, update data and UI
+3) break into components and add drill down props
 
-In the project directory, you can run:
+There is also a fake page for a UI sample area
 
-### `npm start`
+run:
+node backend/server.js
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---------------------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# flexbox:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+display: flex;
 
-### `npm run build`
+justify-content:
+flex-start (default) flex-end center space-between space-around space-evenly
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+align-items:
+flex-start flex-end center baseline stretch (default)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+flex-direction:
+row (default) row-reverse column column-reverse
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+order
 
-### `npm run eject`
+align-self:
+flex-start flex-end center baseline stretch
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+flex-wrap:
+nowrap (default) wrap wrap-reverse
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+align-content:
+flex-start flex-end center space-between space-around space-evenly stretch (default)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+flex-flow - shortcut for flex-direction and flex-wrap
+<flex-direction> <flex-wrap>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+grid:
+display: grid;
+grid-template-columns: 20% 20% 20% 20% 20%;
+grid-template-rows: 20% 20% 20% 20% 20%;
+grid-template-columns: repeat(8, 12.5%)
+grid-template-columns: 100px 3em 40%
+grid-area: 1 / 1 / 6 / 2;
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+grid-template-rows: repeat(4,12.5px) 1fr
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#water {
+  grid-column: 1 / 6;
+  grid-row: 5 / 6;
+}
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+grid-column-start: span 3
+grid-column-end: 6;
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+CSS Outline Style
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The outline-style property specifies the style of the outline, and can have one of the following values:
 
-### Advanced Configuration
+    dotted - Defines a dotted outline
+    dashed - Defines a dashed outline
+    solid - Defines a solid outline
+    double - Defines a double outline
+    groove - Defines a 3D grooved outline
+    ridge - Defines a 3D ridged outline
+    inset - Defines a 3D inset outline
+    outset - Defines a 3D outset outline
+    none - Defines no outline
+    hidden - Defines a hidden outline
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    outline-style
+    outline-color
+    outline-width
+    outline-offset
+    outline
